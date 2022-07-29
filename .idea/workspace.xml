@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be3a7330-1c27-4430-a31f-6d132748e364" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/modulos/produto/ProdutoTestRft.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/FormularioDeAdicaoDeProdutoPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/FormularioDeEdicaoDeProdutoPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/ListaDeProdutosPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/telas/BaseTela.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modulos/produto/ProdutoTestRft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modulos/produto/ProdutoTestRft.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/FormularioDeAdicaoDeProdutoPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/telas/FormularioAdicaoProdutoTela.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/FormularioDeEdicaoDeProdutoPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ListaDeProdutosPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/telas/ListagemDeProdutosTela.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/telas/LoginTela.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

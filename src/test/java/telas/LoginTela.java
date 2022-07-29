@@ -1,30 +1,29 @@
-package pages;
+package telas;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage {
-    private WebDriver app;
+public class LoginTela extends BaseTela {
 
-    public LoginPage(WebDriver app) { this.app = app; }
+    public LoginTela(WebDriver app) { super(app); }
 
-    public LoginPage informaOUsuario( String usuario){
+    public LoginTela preencherUsuario(String usuario){
         //fazer Login
         app.findElement(By.id("com.lojinha:id/user")).click();
         app.findElement(By.id("com.lojinha:id/user")).findElement(By.id("com.lojinha:id/editText")).sendKeys(usuario);
         return this;
     }
 
-    public  LoginPage informarASenha (String senha){
+    public LoginTela preencherSenha(String senha){
         app.findElement(By.id("com.lojinha:id/password")).click();
         app.findElement(By.id("com.lojinha:id/password")).findElement(By.id("com.lojinha:id/editText")).sendKeys(senha);
         return this;
     }
 
-    public ListaDeProdutosPage submeterFormularioDeLogin(){
+    public ListagemDeProdutosTela submeterLogin(){
         app.findElement(By.id("com.lojinha:id/loginButton")).click();
 
-        return new ListaDeProdutosPage(app);
+        return new ListagemDeProdutosTela(app);
 
     }
 

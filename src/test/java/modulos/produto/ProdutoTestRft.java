@@ -1,11 +1,10 @@
 package modulos.produto;
 
 import org.junit.jupiter.api.*;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import pages.LoginPage;
+import telas.LoginTela;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -33,21 +32,26 @@ public class ProdutoTestRft {
     }
 
     @Test
-    @DisplayName("Validação do valor de Produto Não Permitido")
+    @DisplayName("Validação do Valor de Produto Não Permitido")
     public void testValidacaoDoValorDeProdutoNaoPermitido () {
         //Fazer login
-        String mensagemApresentada = new LoginPage(app)
-                .informaOUsuario("admin")
-                .informarASenha("admin")
-                .submeterFormularioDeLogin()
-                .acessarFormularioNovoProduto()
-                .informarNomeDoProduto("Dell")
-                .informarValorDoProduto("700001")
-                .informarCoresDoProduto("Prata")
-                .submeterFormularioDeAdicaoComErro()
-                .capturarMensagemApresentada();
+        String mensagemApresentada = new LoginTela(app)
+                .preencherUsuario("admin")
+                .preencherSenha("admin")
+                .submeterLogin()
+                .abrirTelaAdicaoProduto()
+                .preencherNomeProduto("Dell")
+                .preencherValorProduto("700001")
+                .preencherCoresProduto("Prata")
+                .submissaoComErro()
+                .obterMensagemDeErro();
 
         Assertions.assertEquals("O valor do produto deve estar entre R$ 0,01 e R$ 7.000,00", mensagemApresentada);
 
+    }
+
+    @AfterEach
+    public void afterEach() {
+        app.quit();
     }
 }
